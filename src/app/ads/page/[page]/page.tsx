@@ -12,7 +12,7 @@ const AdsPage = async ({ params }: { params: Promise<{ page: string }> }) => {
   }
   return (
     <div className="p-6 d-flex justify-center align-middle ">
-     <div className="w-full max-w-5xl mx-auto">
+     <div className="w-full max-w-7xl mx-auto">
          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {items.map((ad) => (
           <AdCard key={ad.id} ad={ad} />
