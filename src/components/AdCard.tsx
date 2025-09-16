@@ -1,17 +1,17 @@
 import type { Ad } from "@/lib/types/ad";
 import { money } from "@/lib/utils/format";
-import { getImageSrc } from "@/funtions/isValidUrl";
-
-const AdCard = ({ ad }: { ad: Ad }) => {
-  const src = getImageSrc(ad.images?.[0]); 
+import { getSafeImageSrc } from "@/funtions/isValidUrl";
+const AdCard = async ({ ad }: { ad: Ad }) => {
+const src = await getSafeImageSrc(ad.images?.[0]);
   return (
     <article className="group relative border rounded-2xl shadow-sm overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300">
       {ad.images?.length ? (
-       <img
-  src={ad.images?.[0] || "/default.png"}
-  alt={ad.title}
-  className="w-full h-48 object-cover"
-/>    ) : (
+        <img
+          src={src}
+          alt={ad.title}
+          className="w-full h-48 object-cover"
+        />
+      ) : (
         <div className="w-full h-52 flex items-center justify-center bg-gray-100 text-gray-500 text-sm">
           No Image Provided
         </div>

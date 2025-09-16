@@ -19,7 +19,17 @@ const Pagination = ({ totalPages, currentPage }: PaginationProps) => {
         )}
         {visiblePages.map((page, idx) =>
           page === "..." ? (
-            <li key={`dots-${idx}`} className="px-3 py-2 text-gray-400">…</li>
+            <li key={`dots-${idx}`}>
+              <Link
+                href={`/ads/page/${Math.min(currentPage + 3, totalPages)}`}
+                className="px-3 py-2 rounded-full border bg-gray-100 text-gray-600 
+                           hover:bg-indigo-100 hover:text-indigo-700 transition-colors 
+                           cursor-pointer"
+                title="Jump 3 pages ahead"
+              >
+                ⋯
+              </Link>
+            </li>
           ) : (
             <li key={page}>
               <Link

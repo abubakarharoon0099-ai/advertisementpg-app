@@ -19,7 +19,6 @@ const NoAds = () => (
     <p className="text-sm text-gray-500 mt-2">
       Please check back later or try a different category.
     </p>
-
     <Link
       href="/ads/page/1"
       className="mt-6 px-5 py-2.5 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors"
@@ -28,5 +27,4 @@ const NoAds = () => (
     </Link>
   </div>
 );
-
 export default NoAds;
