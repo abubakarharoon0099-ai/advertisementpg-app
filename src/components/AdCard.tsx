@@ -1,8 +1,11 @@
 import type { Ad } from "@/lib/types/ad";
 import { money } from "@/lib/utils/format";
 import { getSafeImageSrc } from "@/funtions/isValidUrl";
+
 const AdCard = async ({ ad }: { ad: Ad }) => {
+
 const src = await getSafeImageSrc(ad.images?.[0]);
+
   return (
     <article className="group relative border rounded-2xl shadow-sm overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300">
         <img

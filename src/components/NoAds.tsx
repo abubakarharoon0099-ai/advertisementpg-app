@@ -20,7 +20,7 @@ const NoAds = () => (
       Please check back later or try a different category.
     </p>
     <Link
-      href="/ads/page/1"
+      href="/"
       className="mt-6 px-5 py-2.5 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors"
     >
       Go Back 
