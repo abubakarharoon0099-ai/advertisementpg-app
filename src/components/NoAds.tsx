@@ -1,6 +1,6 @@
 import Link from "next/link";
 const NoAds = () => (
-  <div className="flex flex-col items-center justify-center h-64 text-center">
+  <div className="flex flex-col items-center justify-center h-[100vh] text-center">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className="h-16 w-16 text-gray-400 mb-4"
